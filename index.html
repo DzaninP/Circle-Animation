@@ -1,0 +1,28 @@
+<doctype html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Circle Animation TRY 2</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <div class="center">
+                <div class="circle spin-right" onclick="handleCircleOnClick()">
+                    <span class="text">Click me!
+                    </span>
+                </div>
+            </div>
+            <script>
+                function handleCircleOnClick(){
+                    const circle = document.querySelector(".circle");
+                    const spinClass = circle.classList[1];
+ 
+                    if(spinClass === "spin-right"){
+                        circle.classList.replace("spin-right", "spin-left")
+                    }else if(spinClass === "spin-left"){
+                        circle.classList.replace("spin-left", "spin-right")
+                    }
+                }
+             </script>
+        </body>
+    </html>
